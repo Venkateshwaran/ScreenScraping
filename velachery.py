@@ -24,5 +24,5 @@ for eachproperty in soup.findAll('div', {'class':'sT'}):
     project = 'NULL'        
   area = re.findall(re_digit, div.find('i', {'class': 'blk'}).text.strip())
   print ' ('
-  print today,","+ (a['href'] if a + '1' else '`NULL`')+",", (a.string if a else 'NULL, NULL')+ "," +",".join(re.findall("'([a-zA-Z0-9,\s]*)'", (a['onclick'] if a else 'NULL, NULL, NULL, NULL, NULL, NULL')))+","+ ", ".join([project] + area),","+pdates+""
+  print today,","+ (a['href'] if a else '`NULL`')+",", (a.string if a else 'NULL, NULL')+ "," +",".join(re.findall("'([a-zA-Z0-9,\s]*)'", (a['onclick'] if a else 'NULL, NULL, NULL, NULL, NULL, NULL')))+","+ ", ".join([project] + area),","+pdates+""
   print ' ), '
