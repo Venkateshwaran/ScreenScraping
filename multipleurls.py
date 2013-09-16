@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup as Soup
 import csv
 today = datetime.date.today()
 #html = urllib2.urlopen("http://www.99acres.com/property-in-velachery-chennai-south-ffid").read()
-for locality in "velachery", "thoraipakkam", "madipakkam":
- html =urllib2.urlopen("http://www.99acres.com/property-in-" + locality + "-chennai-south-ffid")
+for locality in "velachery-chennai-south", "thoraipakkam-chennai-south", "madipakkam-chennai-south", "kalapatti-coimbatore":
+ html =urllib2.urlopen("http://www.99acres.com/property-in-" + locality + "-ffid")
  soup = Soup(html)
  print "INSERT INTO `property` (`date`,`Url`,`Rooms`,`place`,`PId`,`Phonenumber1`,`Phonenumber2`,`Phonenumber3`,`Typeofperson`,` Nameofperson`,`typeofproperty`,`Sq.Ft`,`PerSq.Ft`,`AdDate`,`AdYear`)"
  print 'VALUES'
